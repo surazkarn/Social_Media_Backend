@@ -14,11 +14,5 @@ const app = express();
 //start the express server and listen for incoming requests on the specified port
 app.listen(PORT, async () => {
     console.log(`Server Started on ${PORT}`);
-    
-    try {
-        await connect();
-        console.log('Database connected');
-    } catch (error) {
-        console.log('Error connecting to the database:', error);
-    }
+    await connect();
 });
